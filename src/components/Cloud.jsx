@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BoxLogo from '../../public/world.png'
 import Arrow from '../../public/arrow.png';
 import Line from '../../public/line.png';
 import Ips from '../../public/ips.png'
 import Ports from '../../public/ports.png';
+import { AgCharts } from "ag-charts-react";
 
 
 const Cloud = ({cloudInfo , handleChange}) => {
+
   return (
     <label htmlFor='cloud' className='cursor-pointer'>
     <div className='bg-box p-5 flex flex-col text-white rounded-xl '>
@@ -31,7 +33,7 @@ const Cloud = ({cloudInfo , handleChange}) => {
             <span className='font-bold text-2xl'>{cloudInfo?.total_live}</span>
           </div>
           <div>
-            <img src={Line} className='w-20 object-contain' />
+          <img src={Line} className='w-20 object-contain' />
           </div>
         </div>
         <div className='flex items-center gap-3'>
